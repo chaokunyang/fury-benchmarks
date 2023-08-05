@@ -29,6 +29,12 @@ jacksonDeserializeStruct        thrpt   15    414789.246 ±   41800.623  ops/s
 jacksonSerializeMediaContent    thrpt   15   4687989.928 ±  312583.246  ops/s
 jacksonSerializeStruct          thrpt   15    674588.920 ±   50615.301  ops/s
 ```
-
+Compute speedup:
+```python
+import pandas as pd
+df = pd.read_csv("jmh-result.csv")
+s = df["Score"]
+s[:4].to_numpy()/s[4:].to_numpy()
+```
 ## Fury vs SBE
 TODO
