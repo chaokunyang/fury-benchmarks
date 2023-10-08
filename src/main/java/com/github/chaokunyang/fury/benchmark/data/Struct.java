@@ -1,4 +1,4 @@
-package io.chaokunyang.benchmark.data;
+package com.github.chaokunyang.fury.benchmark.data;
 
 import java.util.Objects;
 import java.util.Random;

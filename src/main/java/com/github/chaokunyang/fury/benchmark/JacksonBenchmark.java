@@ -1,11 +1,11 @@
-package io.chaokunyang.benchmark;
+package com.github.chaokunyang.fury.benchmark;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.chaokunyang.benchmark.data.Image;
-import io.chaokunyang.benchmark.data.Media;
-import io.chaokunyang.benchmark.data.MediaContent;
-import io.chaokunyang.benchmark.data.Struct;
+import com.github.chaokunyang.fury.benchmark.data.Image;
+import com.github.chaokunyang.fury.benchmark.data.MediaContent;
+import com.github.chaokunyang.fury.benchmark.data.Struct;
+import com.github.chaokunyang.fury.benchmark.data.Media;
 import io.fury.Fury;
 import org.openjdk.jmh.Main;
 import org.openjdk.jmh.annotations.Benchmark;
