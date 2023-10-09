@@ -14,13 +14,14 @@ import java.io.IOException;
 
 public class JacksonBenchmark extends BenchmarkBase {
   private static final ObjectMapper mapper = new ObjectMapper(); // create once, reuse
-  private static final Fury fury = Fury.builder().build(); // create once, reuse
   private static byte[] jacksonMediaContentBytes;
   private static byte[] jacksonStructBytes;
   static {
     try {
       jacksonMediaContentBytes = mapper.writeValueAsBytes(mediaContent);
       jacksonStructBytes = mapper.writeValueAsBytes(struct);
+      System.out.println("jacksonMediaContentBytes size " + jacksonMediaContentBytes.length);
+      System.out.println("jacksonStructBytes size " + jacksonStructBytes.length);
     } catch (JsonProcessingException e) {
       throw new RuntimeException(e);
     }
@@ -49,7 +50,7 @@ public class JacksonBenchmark extends BenchmarkBase {
   public static void main(String[] args) throws IOException {
     if (args.length == 0) {
       String commandLine =
-        "io.*JacksonBenchmark.* -f 3 -wi 5 -i 5 -t 1 -w 2s -r 2s -rf csv";
+        "com.*JacksonBenchmark.* -f 3 -wi 5 -i 5 -t 1 -w 2s -r 2s -rf csv";
       System.out.println(commandLine);
       args = commandLine.split(" ");
     }
