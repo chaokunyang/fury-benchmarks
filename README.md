@@ -55,3 +55,20 @@ MicrostreamBenchmark.microstreamDeserializeMediaContent  thrpt    3     76354.36
 MicrostreamBenchmark.microstreamSerializeMediaContent    thrpt    3     66316.198 ±   729572.587  ops/s
 MicrostreamBenchmark.microstreamSerializeStruct          thrpt    3    233374.717 ±   732378.317  ops/s
 ```
+
+## Fury vs Kryo in JDK17:
+- Fury is 5.6x faster than kryo for Media deserialization
+- Fury is 7x faster than jackson for Struct deserialization
+- Fury is 7.4x faster than jackson for MediaContent serialization
+- Fury is 10.6x faster than jackson for Struct serialization
+```java
+Benchmark                                   Mode  Cnt         Score         Error  Units
+KryoBenchmark.furyDeserializeMediaContent  thrpt    9   3490212.690 ±  591578.782  ops/s
+KryoBenchmark.furyDeserializeStruct        thrpt    9  17265459.380 ± 7841724.144  ops/s
+KryoBenchmark.furySerializeMediaContent    thrpt    9   4710037.116 ±  509360.412  ops/s
+KryoBenchmark.furySerializeStruct          thrpt    9  21477984.000 ± 7130370.187  ops/s
+KryoBenchmark.kryoDeserializeMediaContent  thrpt    9    617803.698 ±   84850.804  ops/s
+KryoBenchmark.kryoDeserializeStruct        thrpt    9   2474622.585 ±  321439.113  ops/s
+KryoBenchmark.kryoSerializeMediaContent    thrpt    9    637830.567 ±   88424.217  ops/s
+KryoBenchmark.kryoSerializeStruct          thrpt    9   2017452.076 ±  461692.389  ops/s
+```
