@@ -17,7 +17,7 @@ import java.io.IOException;
 public class KryoBenchmark {
   private static Kryo kryo = new Kryo();
   private static MediaContent mediaContent = MediaContent.create();
-  private static Struct struct = Struct.create(7);
+  private static Struct struct = Struct.create();
   private static byte[] kryoMediaContentBytes;
   private static byte[] kryoStructBytes;
   private static Output output = new Output(1024, -1);

@@ -1,7 +1,8 @@
 package com.github.chaokunyang.fury.benchmark.data;
 
+import io.fury.util.ReflectionUtils;
+
 import java.util.Objects;
-import java.util.Random;
 
 public class Struct {
   public int f1;
@@ -21,25 +22,11 @@ public class Struct {
   public double f15;
   public double f16;
 
-  public static Struct create(int seed) {
-    Random random = new Random(seed);
+  public static Struct create() {
     Struct struct = new Struct();
-    struct.f1 = random.nextInt();
-    struct.f2 = random.nextInt();
-    struct.f3 = random.nextInt();
-    struct.f4 = random.nextInt();
-    struct.f5 = random.nextInt();
-    struct.f6 = random.nextInt();
-    struct.f7 = random.nextInt();
-    struct.f8 = random.nextInt();
-    struct.f9 = random.nextInt();
-    struct.f10 = random.nextInt();
-    struct.f11 = random.nextInt();
-    struct.f12 = random.nextInt();
-    struct.f13 = random.nextInt();
-    struct.f14 = random.nextInt();
-    struct.f15 = random.nextInt();
-    struct.f16 = random.nextInt();
+    com.github.chaokunyang.fury.benchmark.record.data.Struct struct1
+      = com.github.chaokunyang.fury.benchmark.record.data.Struct.create();
+    ReflectionUtils.unsafeCopy(struct1, struct);
     return struct;
   }
 
@@ -55,5 +42,31 @@ public class Struct {
   @Override
   public int hashCode() {
     return Objects.hash(f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15, f16);
+  }
+
+  @Override
+  public String toString() {
+    return "Struct{" +
+      "f1=" + f1 +
+      ", f2=" + f2 +
+      ", f3=" + f3 +
+      ", f4=" + f4 +
+      ", f5=" + f5 +
+      ", f6=" + f6 +
+      ", f7=" + f7 +
+      ", f8=" + f8 +
+      ", f9=" + f9 +
+      ", f10=" + f10 +
+      ", f11=" + f11 +
+      ", f12=" + f12 +
+      ", f13=" + f13 +
+      ", f14=" + f14 +
+      ", f15=" + f15 +
+      ", f16=" + f16 +
+      '}';
+  }
+
+  public static void main(String[] args) {
+    System.out.println(create());
   }
 }
