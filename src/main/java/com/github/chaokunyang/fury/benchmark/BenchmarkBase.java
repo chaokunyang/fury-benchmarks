@@ -10,7 +10,7 @@ import org.openjdk.jmh.annotations.Benchmark;
 public class BenchmarkBase {
   public static final Fury fury = Fury.builder().build(); // create once, reuse
   public static MediaContent mediaContent = new MediaContent().populate(false);
-  public static Struct struct = Struct.create(2);
+  public static Struct struct = Struct.create();
   public static byte[] furyMediaContentBytes;
   public static byte[] furyStructBytes;
 
