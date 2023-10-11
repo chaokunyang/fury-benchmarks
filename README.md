@@ -12,6 +12,14 @@ Hardware: 2.6 GHz 6-Core Intel Core i7
 
 # Benchmark Results
 ## Fury vs Jackson
+Fury is 3x smaller for serialized binary size at most:
+```java
+furyMediaContentBytes size 336
+furyStructBytes size 90
+jacksonMediaContentBytes size 664
+jacksonStructBytes size 278
+```
+
 The benchmark results here are for reference only. Jackson is a json format, fury is a binary format, which are suitable for different scenarios.
 - Fury is 32.1x faster than jackson for Struct serialization
 - Fury is 45x faster than jackson for Struct deserialization
