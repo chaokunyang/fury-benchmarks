@@ -65,10 +65,10 @@ MicrostreamBenchmark.microstreamSerializeStruct          thrpt    3    233374.71
 ```
 
 ## Fury vs Kryo in JDK17:
-- Fury is 7.4x faster than jackson for MediaContent serialization
-- Fury is 12.4x faster than jackson for Struct serialization
+- Fury is 7.4x faster than kryo for MediaContent serialization
+- Fury is 12.4x faster than kryo for Struct serialization
 - Fury is 4.8x faster than kryo for Media deserialization
-- Fury is 9.8x faster than jackson for Struct deserialization
+- Fury is 9.8x faster than kryo for Struct deserialization
 ```java
 Benchmark                                   Mode  Cnt         Score         Error  Units
 KryoBenchmark.furyDeserializeMediaContent  thrpt    9   2640092.499 ±  202407.109  ops/s
@@ -93,10 +93,10 @@ furyStructBytes size 70
 avaje mediaContentBytes size 586
 avaje structBytes size 149
 ```
-- Fury is 5.6x faster than kryo for Media serialization
-- Fury is 29x faster than jackson for Struct serialization
-- Fury is 6x faster than jackson for MediaContent deserialization
-- Fury is 24x faster than jackson for Struct deserialization
+- Fury is 5.6x faster than Avaje for Media serialization
+- Fury is 29x faster than Avaje for Struct serialization
+- Fury is 6x faster than Avaje for MediaContent deserialization
+- Fury is 24x faster than Avaje for Struct deserialization
 ```java
 Benchmark                                     Mode  Cnt         Score         Error  Units
 AvajeBenchmark.avajeDeserializeMediaContent  thrpt    3    435874.584 ±   54036.329  ops/s
