@@ -19,9 +19,12 @@
 
 package com.github.chaokunyang.fury.benchmark.data;
 
+import io.avaje.jsonb.Json;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Json
 public class MediaContent implements java.io.Serializable {
   public Media media;
   public List<Image> images;

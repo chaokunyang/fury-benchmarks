@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbe:messageSchema xmlns:sbe="http://fixprotocol.io/2016/sbe"
+                   package="com.baeldung.sbe.stub" id="1" version="0" semanticVersion="5.2"
+                   description="A schema represents stock market data.">
+  <types>
+    <composite name="messageHeader"
+               description="Message identifiers and length of message root.">
+      <type name="blockLength" primitiveType="uint16"/>
+      <type name="templateId" primitiveType="uint16"/>
+      <type name="schemaId" primitiveType="uint16"/>
+      <type name="version" primitiveType="uint16"/>
+    </composite>
+    <composite name="Struct" description="Struct">
+      <type name="f1" primitiveType="int32"/>
+      <type name="f2" primitiveType="int32"/>
+      <type name="f3" primitiveType="int64"/>
+      <type name="f4" primitiveType="int64"/>
+      <type name="f5" primitiveType="float"/>
+      <type name="f6" primitiveType="float"/>
+      <type name="f7" primitiveType="double"/>
+      <type name="f8" primitiveType="double"/>
+      <type name="f9" primitiveType="int32"/>
+      <type name="f10" primitiveType="int32"/>
+      <type name="f11" primitiveType="int64"/>
+      <type name="f12" primitiveType="int64"/>
+      <type name="f13" primitiveType="float"/>
+      <type name="f14" primitiveType="float"/>
+      <type name="f15" primitiveType="double"/>
+      <type name="f16" primitiveType="double"/>
+    </composite>
+  </types>
+  <sbe:message name="StructMsg" id="1" description="Struct">
+    <field name="struct" id="1" type="Struct"/>
+  </sbe:message>
+</sbe:messageSchema>

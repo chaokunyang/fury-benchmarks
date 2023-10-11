@@ -49,8 +49,10 @@ class ColorMap(UserDict):
         if value is None:
             if item.startswith("fury"):
                 return color_map["Fury"]
-            if item.startswith("kryo"):
+            elif item.startswith("kryo"):
                 return color_map["Kryo"]
+            else:
+                return 0.80, 0.5, 0.6
         return value
 
 
