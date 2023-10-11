@@ -1,9 +1,11 @@
 package com.github.chaokunyang.fury.benchmark.data;
 
+import io.avaje.jsonb.Json;
 import io.fury.util.ReflectionUtils;
 
 import java.util.Objects;
 
+@Json
 public class Struct {
   public int f1;
   public int f2;

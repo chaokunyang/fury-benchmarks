@@ -19,8 +19,11 @@
 
 package com.github.chaokunyang.fury.benchmark.data;
 
+import io.avaje.jsonb.Json;
+
 import java.io.Serializable;
 
+@Json
 public class Image implements Serializable {
   public String uri;
   public String title; // Can be null.

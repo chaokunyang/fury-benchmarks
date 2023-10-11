@@ -19,8 +19,11 @@
 
 package com.github.chaokunyang.fury.benchmark.data;
 
+import io.avaje.jsonb.Json;
+
 import java.util.List;
 
+@Json
 public class Media implements java.io.Serializable {
   public String uri;
   public String title; // Can be null.

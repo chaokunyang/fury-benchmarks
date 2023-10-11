@@ -13,6 +13,7 @@
     <maven.compiler.target>17</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jmh.version>1.36</jmh.version>
+    <avaje-jsonb-version>1.8</avaje-jsonb-version>
     <uberjar.name>benchmarks</uberjar.name>
   </properties>
 
@@ -75,6 +76,24 @@
       <groupId>uk.co.real-logic</groupId>
       <artifactId>sbe-all</artifactId>
       <version>1.27.0</version>
+    </dependency>
+    <dependency>
+      <groupId>io.avaje</groupId>
+      <artifactId>avaje-jsonb</artifactId>
+      <version>${avaje-jsonb-version}</version>
+    </dependency>
+    <!-- if using spring web, add the below to use jsonb for http messaging -->
+    <dependency>
+      <groupId>io.avaje</groupId>
+      <artifactId>avaje-jsonb-spring-starter</artifactId>
+      <version>${avaje-jsonb-version}</version>
+    </dependency>
+    <!-- Annotation processors -->
+    <dependency>
+      <groupId>io.avaje</groupId>
+      <artifactId>avaje-jsonb-generator</artifactId>
+      <version>${avaje-jsonb-version}</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 

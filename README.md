@@ -84,3 +84,28 @@ KryoBenchmark.kryoSerializeStruct          thrpt    9   2034529.376 ±  372048.4
 <img width="45%" alt="" src="images/bench_struct_tps.png">
 <img width="45%" alt="" src="images/bench_media_content_tps.png">
 </p>
+
+## Fury vs Avaje
+For serialized data size, fury is half of avaje:
+```java
+furyMediaContentBytes size 336
+furyStructBytes size 70
+avaje mediaContentBytes size 586
+avaje structBytes size 149
+```
+
+```java
+Benchmark                                     Mode  Cnt         Score         Error  Units
+AvajeBenchmark.avajeDeserializeMediaContent  thrpt    3    435874.584 ±   54036.329  ops/s
+AvajeBenchmark.avajeDeserializeStruct        thrpt    3    906966.403 ± 1349025.028  ops/s
+AvajeBenchmark.avajeSerializeMediaContent    thrpt    3    669107.596 ±   11450.125  ops/s
+AvajeBenchmark.avajeSerializeStruct          thrpt    3    990601.474 ±   61731.364  ops/s
+AvajeBenchmark.furyDeserializeMediaContent   thrpt    3   2607302.095 ± 2653734.646  ops/s
+AvajeBenchmark.furyDeserializeStruct         thrpt    3  21689653.040 ± 2702955.367  ops/s
+AvajeBenchmark.furySerializeMediaContent     thrpt    3   3775725.625 ±  273398.873  ops/s
+AvajeBenchmark.furySerializeStruct           thrpt    3  28858705.061 ± 4330421.563  ops/s
+```
+<p align="center">
+<img width="45%" alt="" src="images/avaje/bench_struct_tps.png">
+<img width="45%" alt="" src="images/avaje/bench_media_content_tps.png">
+</p>
