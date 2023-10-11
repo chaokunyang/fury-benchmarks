@@ -93,7 +93,10 @@ furyStructBytes size 70
 avaje mediaContentBytes size 586
 avaje structBytes size 149
 ```
-
+- Fury is 5.6x faster than kryo for Media serialization
+- Fury is 29x faster than jackson for Struct serialization
+- Fury is 6x faster than jackson for MediaContent deserialization
+- Fury is 24x faster than jackson for Struct deserialization
 ```java
 Benchmark                                     Mode  Cnt         Score         Error  Units
 AvajeBenchmark.avajeDeserializeMediaContent  thrpt    3    435874.584 ±   54036.329  ops/s
