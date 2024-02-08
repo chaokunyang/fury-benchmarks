@@ -21,6 +21,7 @@ public class KryoBenchmark {
   private static byte[] kryoMediaContentBytes;
   private static byte[] kryoStructBytes;
   private static Output output = new Output(1024, -1);
+  private static Input input = new Input();
 
   static {
     // kryo.setRegistrationRequired(false);
@@ -53,7 +54,8 @@ public class KryoBenchmark {
 
   @Benchmark
   public Object kryoDeserializeMediaContent() throws Exception {
-    return kryo.readObject(new Input(kryoMediaContentBytes), MediaContent.class);
+    input.setBuffer(kryoMediaContentBytes);
+    return kryo.readObject(input, MediaContent.class);
   }
 
   @Benchmark
@@ -65,7 +67,8 @@ public class KryoBenchmark {
 
   @Benchmark
   public Object kryoDeserializeStruct() throws Exception {
-    return kryo.readObject(new Input(kryoStructBytes), Struct.class);
+    input.setBuffer(kryoStructBytes);
+    return kryo.readObject(input, Struct.class);
   }
 
 
