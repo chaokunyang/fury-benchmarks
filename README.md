@@ -54,15 +54,14 @@ microstream structBytes size 120
 ```
 Fury is :
 ```java
-Benchmark                                   Mode  Cnt         Score         Error  Units
-KryoBenchmark.furyDeserializeMediaContent  thrpt    9   2468765.648 ±  314266.100  ops/s
-KryoBenchmark.furyDeserializeStruct        thrpt    9  20031536.933 ± 1893069.982  ops/s
-KryoBenchmark.furySerializeMediaContent    thrpt    9   4041446.580 ±  402177.778  ops/s
-KryoBenchmark.furySerializeStruct          thrpt    9  25475238.500 ±  920132.134  ops/s
-KryoBenchmark.kryoDeserializeMediaContent  thrpt    9    545891.524 ±   19581.938  ops/s
-KryoBenchmark.kryoDeserializeStruct        thrpt    9   2496417.446 ±   76754.451  ops/s
-KryoBenchmark.kryoSerializeMediaContent    thrpt    9    478720.501 ±   69891.951  ops/s
-KryoBenchmark.kryoSerializeStruct          thrpt    9   1942266.459 ±   63863.902  ops/s
+Benchmark                                                 Mode  Cnt         Score          Error  Units
+MicrostreamBenchmark.furyDeserializeMediaContent         thrpt    3   2082751.515 ±  2638613.695  ops/s
+MicrostreamBenchmark.furyDeserializeStruct               thrpt    3  10334292.992 ± 10542478.626  ops/s
+MicrostreamBenchmark.furySerializeMediaContent           thrpt    3   2898943.216 ±   946978.784  ops/s
+MicrostreamBenchmark.furySerializeStruct                 thrpt    3  13980885.316 ± 13424528.901  ops/s
+MicrostreamBenchmark.microstreamDeserializeMediaContent  thrpt    3     76354.367 ±   231329.651  ops/s
+MicrostreamBenchmark.microstreamSerializeMediaContent    thrpt    3     66316.198 ±   729572.587  ops/s
+MicrostreamBenchmark.microstreamSerializeStruct          thrpt    3    233374.717 ±   732378.317  ops/s
 ```
 
 ## Fury vs Kryo in JDK17:
