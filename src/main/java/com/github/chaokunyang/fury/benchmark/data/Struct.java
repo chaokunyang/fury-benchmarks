@@ -1,7 +1,7 @@
 package com.github.chaokunyang.fury.benchmark.data;
 
 import io.avaje.jsonb.Json;
-import io.fury.util.ReflectionUtils;
+import org.apache.fury.reflect.ReflectionUtils;
 
 import java.util.Objects;
 
