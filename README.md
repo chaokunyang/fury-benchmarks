@@ -112,3 +112,31 @@ AvajeBenchmark.furySerializeStruct           thrpt    3  28858705.061 ± 4330421
 <img width="45%" alt="" src="images/avaje/bench_struct_tps.png">
 <img width="45%" alt="" src="images/avaje/bench_media_content_tps.png">
 </p>
+
+## Fury vs Eclipse
+For serialized data size, fury is 1/5 of eclipse:
+```java
+furyMediaContentBytes size 336
+furyStructBytes size 70
+eclipse mediaContentBytes size 1544
+eclipse structBytes size 120
+```
+- Fury is 34x faster than eclipse for Media serialization
+- Fury is 100x faster than eclipse for Struct serialization
+- Fury is 30x faster than eclipse for MediaContent deserialization
+- Fury is 52x faster than eclipse for Struct deserialization
+```java
+Benchmark                                         Mode  Cnt         Score         Error  Units
+EclipseBenchmark.eclipseDeserializeMediaContent  thrpt    9    131575.419 ±    9426.819  ops/s
+EclipseBenchmark.eclipseDeserializeStruct        thrpt    9    541499.957 ±  116080.027  ops/s
+EclipseBenchmark.eclipseSerializeMediaContent    thrpt    9    160571.843 ±   13393.787  ops/s
+EclipseBenchmark.eclipseSerializeStruct          thrpt    9    389589.337 ±   54602.631  ops/s
+EclipseBenchmark.furyDeserializeMediaContent     thrpt    9   3929205.878 ±  100267.218  ops/s
+EclipseBenchmark.furyDeserializeStruct           thrpt    9  28012278.714 ±  582665.499  ops/s
+EclipseBenchmark.furySerializeMediaContent       thrpt    9   5401529.165 ±  325428.659  ops/s
+EclipseBenchmark.furySerializeStruct             thrpt    9  39210806.902 ± 1638993.713  ops/s
+```
+<p align="center">
+<img width="45%" alt="" src="images/eclipse/bench_struct_tps.png">
+<img width="45%" alt="" src="images/eclipse/bench_media_content_tps.png">
+</p>
