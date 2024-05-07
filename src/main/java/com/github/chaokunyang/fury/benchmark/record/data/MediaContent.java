@@ -1,7 +1,6 @@
 
 package com.github.chaokunyang.fury.benchmark.record.data;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

@@ -6,7 +6,7 @@ import com.github.chaokunyang.fury.benchmark.data.Image;
 import com.github.chaokunyang.fury.benchmark.data.MediaContent;
 import com.github.chaokunyang.fury.benchmark.data.Struct;
 import com.github.chaokunyang.fury.benchmark.data.Media;
-import io.fury.Fury;
+import org.apache.fury.Fury;
 import org.openjdk.jmh.Main;
 import org.openjdk.jmh.annotations.Benchmark;
 
